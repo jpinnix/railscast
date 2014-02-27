@@ -1,0 +1,12 @@
+{
+  "name": "railscast",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An Atom syntax theme based on the Railscast theme.",
+  "repository": "https://github.com/jpinnix/railscast",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
