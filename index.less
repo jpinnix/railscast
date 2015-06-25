@@ -1,119 +1,123 @@
-.editor, .editor .gutter {
-  background-color: #171717;
-  color: #E6E1DC;
-}
+atom-text-editor, // <- remove when Shadow DOM can't be disabled
+:host
+  atom-text-editor, atom-text-editor::shadow .gutter {
+    background-color: #171717;
+    color: #E6E1DC;
+  }
 
-.editor.is-focused .cursor {
-  border-color: #FFFFFF;
-}
+  atom-text-editor::shadow .is-focused .cursor {
+    border-color: #FFFFFF;
+  }
 
-.editor.is-focused .selection .region {
-  background-color: rgba(90, 100, 126, 0.88);
-}
+  atom-text-editor::shadow .is-focused .selection .region {
+    background-color: rgba(90, 100, 126, 0.88);
+  }
 
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
-  background-color: #1E1E1E;
-}
+  atom-text-editor::shadow .is-focused .line-number.cursor-line-no-selection, atom-text-editor::shadow .is-focused .line.cursor-line {
+    background-color: #1E1E1E;
+  }
 
-/* make invisible characters not so bright */
-.editor .invisible-character {
-  opacity: 0.2
-}
-.editor .indent-guide {
-  opacity: 0.1
-}
-.editor .leading-whitespace.indent-guide.invisible-character {
-  opacity: 0.1
-}
+  /* make invisible characters not so bright */
+  .editor .invisible-character {
+    opacity: 0.2
+  }
+  .editor .indent-guide {
+    opacity: 0.1
+  }
+  .editor .leading-whitespace.indent-guide.invisible-character {
+    opacity: 0.1
+  }
 
-/* parens are good but we don't need to see them so well */
-.editor .punctuation.definition.parameters.ruby {
-  opacity: 0.3
-}
-.editor .punctuation.section.function.ruby {
-  opacity: 0.3
-}
+  /* parens are good but we don't need to see them so well */
+  .editor .punctuation.definition.parameters.ruby {
+    opacity: 0.3
+  }
+  .editor .punctuation.section.function.ruby {
+    opacity: 0.3
+  }
 
-.source {
-  background-color: #171717;
-}
+  .source {
+    background-color: #171717;
+  }
 
-.comment {
-  font-style: italic;
-  color: #BC9458;
-}
+  .comment {
+    font-style: italic;
+    color: #BC9458;
+  }
 
-.keyword, .storage {
-  color: #CC7833;
-}
+  .keyword, .storage {
+    color: #CC7833;
+  }
 
-.entity.name.function, .keyword.other.name-of-parameter.objc {
-  color: #FFC66D;
-}
+  .entity.name.function, .keyword.other.name-of-parameter.objc {
+    color: #FFC66D;
+  }
 
-.entity.name {
-  color: #FFFFFF;
-}
+  .entity.name {
+    color: #FFFFFF;
+  }
 
-.constant.numeric {
-  color: #A5C261;
-}
+  .constant.numeric {
+    color: #A5C261;
+  }
 
-.variable.language, .variable.other {
-  color: #D0D0FF;
-}
+  .variable.language, .variable.other {
+    color: #D0D0FF;
+  }
 
-.constant {
-  color: #6D9CBE;
-}
+  .constant {
+    color: #6D9CBE;
+  }
 
-.variable.other.constant {
-  color: #E44E22;
-}
+  .variable.other.constant {
+    color: #E44E22;
+  }
 
-.constant.language {
-  color: #6E9CBE;
-}
+  .constant.language {
+    color: #6E9CBE;
+  }
 
-.string {
-  color: #A5C261;
-}
+  .string {
+    color: #A5C261;
+  }
 
-.support.function {
-  color: #DA4939;
-}
+  .support.function {
+    color: #DA4939;
+  }
 
-.support.type {
-  color: #6E9CBE;
-}
+  .support.type {
+    color: #6E9CBE;
+  }
 
-.support.constant {
-  color: #A5C261;
-}
+  .support.constant {
+    color: #A5C261;
+  }
 
-.meta.tag, .declaration.tag, .entity.name.tag, .entity.other.attribute-name {
-  color: #E8BF6A;
-}
+  .meta.tag, .declaration.tag, .entity.name.tag, .entity.other.attribute-name {
+    color: #E8BF6A;
+  }
 
-.invalid {
-  color: #FFFFFF;
-  background-color: #990000;
-}
+  .invalid {
+    color: #FFFFFF;
+    background-color: #990000;
+  }
 
-.constant.character.escaped, .constant.character.escape, .string .source, .string .source.ruby {
-  color: #519F50;
-}
+  .constant.character.escaped, .constant.character.escape, .string .source, .string .source.ruby {
+    color: #519F50;
+  }
 
-.markup.inserted {
-  color: #E6E1DC;
-  background-color: #144212;
-}
+  .markup.inserted {
+    color: #E6E1DC;
+    background-color: #144212;
+  }
 
-.markup.deleted {
-  color: #E6E1DC;
-  background-color: #660000;
-}
+  .markup.deleted {
+    color: #E6E1DC;
+    background-color: #660000;
+  }
 
-.meta.diff.header, .meta.separator.diff, .meta.diff.index, .meta.diff.range {
-  background-color: #2F33AB;
-}
+  .meta.diff.header, .meta.separator.diff, .meta.diff.index, .meta.diff.range {
+    background-color: #2F33AB;
+  }
+
+} // end of :host, atom-text-editor
